@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @accommodation.user_id %>
+</p>
+
+<p>
+  <b>Last dorm:</b>
+  <%= @accommodation.last_dorm %>
+</p>
+
+<p>
+  <b>Last room:</b>
+  <%= @accommodation.last_room %>
+</p>
+
+<p>
+  <b>Continuity:</b>
+  <%= @accommodation.continuity %>
+</p>
+
+<p>
+  <b>Social case:</b>
+  <%= @accommodation.social_case %>
+</p>
+
+<p>
+  <b>First dorm:</b>
+  <%= @accommodation.first_dorm %>
+</p>
+
+<p>
+  <b>Second dorm:</b>
+  <%= @accommodation.second_dorm %>
+</p>
+
+<p>
+  <b>Third dorm:</b>
+  <%= @accommodation.third_dorm %>
+</p>
+
+<p>
+  <b>Roommate name:</b>
+  <%= @accommodation.roommate_name %>
+</p>
+
+<p>
+  <b>Roommate group:</b>
+  <%= @accommodation.roommate_group %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @accommodation.status %>
+</p>
+
+<p>
+  <b>Interdiction dorm:</b>
+  <%= @accommodation.interdiction_dorm %>
+</p>
+
+<p>
+  <b>Interdiction type:</b>
+  <%= @accommodation.interdiction_type %>
+</p>
+
+<p>
+  <b>Interdiction reason:</b>
+  <%= @accommodation.interdiction_reason %>
+</p>
+
+
+<%= link_to 'Edit', edit_accommodation_path(@accommodation) %> |
+<%= link_to 'Back', accommodations_path %>

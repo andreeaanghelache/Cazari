@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Accommodation:</b>
+  <%= @document.accommodation_id %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @document.comment %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @document.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

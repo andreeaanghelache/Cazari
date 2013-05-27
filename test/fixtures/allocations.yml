@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dormitory_id: 1
+  room_number: 1
+  year: 2013-05-27
+  type_of_room: MyString
+
+two:
+  dormitory_id: 1
+  room_number: 1
+  year: 2013-05-27
+  type_of_room: MyString

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  last_dorm: MyString
+  last_room: 1
+  continuity: false
+  social_case: false
+  first_dorm: MyString
+  second_dorm: MyString
+  third_dorm: MyString
+  roommate_name: MyString
+  roommate_group: 1
+  status: MyString
+  interdiction_dorm: MyString
+  interdiction_type: MyString
+  interdiction_reason: MyText
+
+two:
+  user_id: 1
+  last_dorm: MyString
+  last_room: 1
+  continuity: false
+  social_case: false
+  first_dorm: MyString
+  second_dorm: MyString
+  third_dorm: MyString
+  roommate_name: MyString
+  roommate_group: 1
+  status: MyString
+  interdiction_dorm: MyString
+  interdiction_type: MyString
+  interdiction_reason: MyText

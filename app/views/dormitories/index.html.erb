@@ -1,0 +1,33 @@
+<h1>Listing dormitories</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Description</th>
+    <th>Administrator</th>
+    <th>Telephone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dormitories.each do |dormitory| %>
+  <tr>
+    <td><%= dormitory.category_id %></td>
+    <td><%= dormitory.name %></td>
+    <td><%= dormitory.address %></td>
+    <td><%= dormitory.description %></td>
+    <td><%= dormitory.administrator %></td>
+    <td><%= dormitory.telephone %></td>
+    <td><%= link_to 'Show', dormitory %></td>
+    <td><%= link_to 'Edit', edit_dormitory_path(dormitory) %></td>
+    <td><%= link_to 'Destroy', dormitory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dormitory', new_dormitory_path %>

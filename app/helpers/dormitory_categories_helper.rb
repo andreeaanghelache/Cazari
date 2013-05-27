@@ -1,0 +1,2 @@
+module DormitoryCategoriesHelper
+end

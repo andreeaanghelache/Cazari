@@ -1,4 +1,16 @@
 Cazari::Application.routes.draw do
+  resources :dormitories
+
+
+  resources :dormitory_categories
+
+
+  resources :documents
+
+
+  resources :accommodations
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
