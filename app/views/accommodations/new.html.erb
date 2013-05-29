@@ -1,5 +1,466 @@
-<h1>New accommodation</h1>
 
-<%= render 'form' %>
+<!doctype html>
 
-<%= link_to 'Back', accommodations_path %>
+<html lang="en">
+
+<head>
+
+	<title>Creeaza cerere</title>
+
+	<meta charset="utf-8" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+
+	<link href="/assets/bootstrap.css" rel="stylesheet" />
+
+	<style>body{padding-top: 60px;}</style>
+
+	<link href="/assets/bootstrap-responsive.css" rel="stylesheet" />
+
+	<link href="/assets/bwizard.min.css" rel="stylesheet" />
+
+	<style type="text/css">
+
+	.tabelWiz{
+
+		width: 100%;
+
+	}
+
+	</style>
+
+</head>
+
+<body>
+
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="navbar-inner">
+
+        <div class="container">      
+
+        	<a class="brand" href="pagCandidat.html">Cazare</a>
+
+        	<div class="nav-collapse collapse nav-bar-inverse-collapse">
+
+        		<ul class="nav pull-right">
+
+        		<li><a href="#">Camine</a></li>
+
+        	    <li><a href="#">Metodologie</a></li>
+
+        	    <li><a href="#">Log out </a></li>
+
+        		</ul>
+
+        	</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+	<div class="container-narrow">
+
+
+
+		<div class="masthead">
+
+			</div>
+
+		<div id="wizard">
+
+			<ol class="three-steps">
+
+				<li>Date personale</li>
+
+				<li>Upload studii si fisiere</li>
+
+				<li>Date cazare</li>
+
+			</ol>
+
+			<div>
+
+			
+
+			<table class="table table-striped tabelWiz" style="width: 100%;">
+
+				<tr>
+
+					<th>
+
+						Nume:
+
+					</th>
+
+					<td>
+
+						Vasile
+
+					</td>
+
+					<th>
+
+						Data nasterii:
+
+					</th>
+
+					<td>
+
+						14.07.1990
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<th>
+
+						Prenume:
+
+					</th>
+
+					<td>
+
+						Gigel
+
+					</td>
+
+					<th>
+
+						Locul nasterii:
+
+					</th>
+
+					<td>
+
+						Prahova
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					
+
+					<th>
+
+						Prenume tata:
+
+					</th>
+
+					<td>
+
+						Vasile
+
+					</td>
+
+					<th>
+
+						BI/CI serie:
+
+					</th>
+
+					<td>
+
+						xxxxxxx
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					
+
+					<th>
+
+						Prenume mama:
+
+					</th>
+
+					<td>
+
+						Maria
+
+					</td>
+
+					<th>
+
+						BI/CI numar:
+
+					</th>
+
+					<td>
+
+						123456
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					
+
+					<th>
+
+						Adresa:
+
+					</th>
+
+					<td>
+
+						Bucuresti, Romania
+
+					</td>
+
+					<th>
+
+						CNP:
+
+					</th>
+
+					<td>
+
+						123456778
+
+					</td>
+
+				</tr>
+
+			</table>
+
+            <div class="clearfix"></div>
+
+
+
+			</div>
+
+			<div>
+
+                <br/>
+
+                <br/>
+
+                <table class="table table-striped">
+
+				<tr>
+
+					<th>
+
+						Facultate:
+
+					</th>
+
+					<td>
+
+						Matematica-Informatica
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<th>
+
+						Sectie:
+
+					</th>
+
+					<td>
+
+					  Matematica
+
+					</th>
+
+				</tr>
+
+				<tr>
+
+					
+
+					<th>
+
+						An:
+
+					</th>
+
+					<td>
+
+						II
+
+					</td>
+
+				</tr>
+
+
+
+			</table>
+
+			<div class="info">
+
+				<button class="btn btn-primary" href="account" style="margin-left: 40px; margin-top: 35px;"> Adauga acte</a>
+
+			</div>
+
+			<div class="clearfix"></div>
+
+
+
+			</div>
+
+
+
+			<div>
+
+				
+
+
+
+			<div class="span12">
+
+          <div class="row">
+
+	      <div class="span5">
+
+  
+
+	    <label>Anul trecut am domiciliat in caminul</label>
+
+			<select>
+
+  				<option>Grozavesti</option>
+
+  				<option>Agronomie</option>
+
+  				<option>Regie</option>
+
+  				<option>Kogalniceanu</option>
+
+			</select>
+
+	    <label>camera:</label>
+
+	    <input type="text" class="span5" placeholder="">
+
+	   
+
+	     <label>Rog comisia sa tina cont de: </label>
+
+        <label class="radio">
+
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+
+            continuitate
+
+          </label>
+
+          <label class="radio">
+
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+
+            situatie sociala
+
+          </label>
+
+	    
+
+	    </div>	    
+
+	    <div class="span7">
+
+	    <div>
+
+	    <label>Preferinte camine:</label>
+
+			<select>
+
+  				<option>Grozavesti</option>
+
+  				<option>Agronomie</option>
+
+  				<option>Regie</option>
+
+  				<option>Kogalniceanu</option>
+
+			</select>
+
+         </div>           
+
+        <label>Preferinte coleg:</label>
+
+         <input type="text" class="span5" placeholder="">
+
+         <div>
+
+         <button class="btn">Salveaza</button>
+
+         <button class="btn">Depune</button>
+
+         <button class="btn">Anuleaza</button>
+
+         </div>
+
+	    </div>
+
+
+
+	    </div>
+
+
+
+		    </div>
+
+		<div class="clearfix"></div>
+
+
+
+
+
+			</div>
+
+			
+
+		</div>
+
+	<div class="bottom-logo">
+
+		<img src="/assets/logo.png" width="150px" height="150px"/>
+
+		</div>
+
+	
+
+	<script src="/assets/jquery.min.js" type="text/javascript"></script>
+
+	<script src="/assets/bootstrap.js" type="text/javascript"></script>
+
+	<script src="/assets/jasny-bootstrap.js" type="text/javascript"></script>
+
+	<script src="/assets/bwizard.js" type="text/javascript"></script>
+
+
+
+	<script type="text/javascript">
+
+	
+
+	   $("#wizard").bwizard();
+
+	</script>
+
+</body>
+
+</html>
