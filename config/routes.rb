@@ -4,7 +4,7 @@ Cazari::Application.routes.draw do
   resources :documents
   resources :accommodations
 
-  root :to => 'accommodations#index'
+  root :to => 'guest#index'
 
   #omniauth
   match '/auth/:provider/callback', :to => 'user_sessions#create'
