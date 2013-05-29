@@ -29,6 +29,10 @@ class AccommodationsController < ApplicationController
   def new
     @accommodation = Accommodation.new
 
+    @result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
+
+    logger.info('result =' + @result.inspect)
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @accommodation }
