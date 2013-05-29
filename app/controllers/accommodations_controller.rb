@@ -1,7 +1,10 @@
+require 'json'
+require 'open-uri'
+
 class AccommodationsController < ApplicationController
-  # GET /accommodations
-  # GET /accommodations.json
-  def index
+ before_filter :login_required
+ 
+ def index
     @accommodations = Accommodation.all
 
     respond_to do |format|

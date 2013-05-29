@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130529071623) do
+ActiveRecord::Schema.define(:version => 20130529084650) do
 
   create_table "accommodations", :force => true do |t|
     t.integer  "user_id"
@@ -78,8 +78,14 @@ ActiveRecord::Schema.define(:version => 20130529071623) do
     t.string   "first_name"
     t.string   "last_name"
     t.float    "score"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "token"
+    t.string   "email"
+    t.string   "is_student"
+    t.string   "is_teacher"
+    t.string   "is_management"
+    t.string   "is_admin"
   end
 
 end
