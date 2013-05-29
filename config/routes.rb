@@ -12,4 +12,6 @@ Cazari::Application.routes.draw do
 
   #logout
   match '/logout', :to => 'user_sessions#destroy'
+
+  match '/creeaza_cerere', :to => 'accommodations#new'
 end
