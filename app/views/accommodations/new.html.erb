@@ -342,7 +342,7 @@
 	    <label>Anul trecut am domiciliat in caminul</label>
                    <%= select("accomodation","last_dormitory", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
                
-
+	    <label>camera </label>
 	    <%= f.text_field :last_room, :type => "text", :class => "span5" %>
 
 
@@ -352,8 +352,9 @@
 
           <!--input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked-->
 
-            <%= f.check_box :continuity, :type => "radio", :name => "optionsRadios", :id => "optionsRadios1", :value => "option1" %>
+            <%= f.check_box :continuity %>
             continuitate
+           
 
           </label>
 
@@ -361,7 +362,7 @@
 
             <!--input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"-->
 
-            <%= f.check_box :social_case, :type => "radio", :name => "optionsRadios", :id => "optionsRadios2", :value => "option2" %>
+            <%= f.check_box :social_case %>
             situatie sociala
 
           </label>
@@ -397,7 +398,7 @@
 
 	 <!--complete hidden fields in accomodation-->
          <%= f.hidden_field :status, :value => "In asteptare" %>
-         <%= f.hidden_field :user_id, :value => @current_user.id %>
+         <%= f.hidden_field :user_id, :value => @current_user.uid %>
         
 	<div>
          <button class="btn">Salveaza</button>
