@@ -340,39 +340,29 @@
   
 
 	    <label>Anul trecut am domiciliat in caminul</label>
-
-			<select>
-
-  				<option>Grozavesti</option>
-
-  				<option>Agronomie</option>
-
-  				<option>Regie</option>
-
-  				<option>Kogalniceanu</option>
-
-			</select>
-
+                   <%= select("accomodation","last_dormitory", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
+               
 	    <label>camera:</label>
 
-	    <input type="text" class="span5" placeholder="">
+	    <%= f.text_field :last_room, :type => "text", :class => "span5" %>
 
-	   
 
-	     <label>Rog comisia sa tina cont de: </label>
+	    <label>Rog comisia sa tina cont de: </label>
 
         <label class="radio">
 
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          <!--input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked-->
 
+            <%= f.check_box :continuity, :type => "radio", :name => "optionsRadios", :id => "optionsRadios1", :value => "option1" %>
             continuitate
 
           </label>
 
           <label class="radio">
 
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            <!--input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"-->
 
+            <%= f.check_box :social_case, :type => "radio", :name => "optionsRadios", :id => "optionsRadios2", :value => "option2" %>
             situatie sociala
 
           </label>
@@ -385,56 +375,42 @@
 
 	    <div>
 
-	    <label>Preferinte camine:</label>
+	    <label>Preferinte camin 1:</label>
 
-			<select>
+                   <%= select("accomodation","first_dormitory", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
+                    
+	    <label>Preferinte camin 2:</label>
 
-  				<option>Grozavesti</option>
+                   <%= select("accomodation","second_dormitory", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
+	    
+	    <label>Preferinte camin 3:</label>
 
-  				<option>Agronomie</option>
-
-  				<option>Regie</option>
-
-  				<option>Kogalniceanu</option>
-
-			</select>
-
+                   <%= select("accomodation","third_dormitory", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
          </div>           
 
-        <label>Preferinte coleg:</label>
+        <label>Preferinte coleg (nume):</label>
 
-         <input type="text" class="span5" placeholder="">
+	 <%= f.text_field :roommate_name, :type => "text", :class => "span5" %>
+        
+        <label>Preferinte coleg (grupa):</label>
 
-         <div>
-
+	 <%= f.text_field :roommate_group, :type => "text", :class => "span5" %>
+         
+	<div>
          <button class="btn">Salveaza</button>
 
          <!--button class="btn">Depune</button-->
-  	 <%= f.submit  "Depune", :class => 'btn' %>
+  	 <%= f.submit  "Depune", :class => 'depune' %>
 
          <button class="btn">Anuleaza</button>
 
          </div>
 
 	    </div>
-
-
-
 	    </div>
-
-
-		
 		    </div>
 		<div class="clearfix"></div>
-
-
-
-
-
 			</div>
-
-			
-
 		</div>
 
 		<div class="bottom-logo">

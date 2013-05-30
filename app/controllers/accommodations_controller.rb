@@ -30,8 +30,8 @@ class AccommodationsController < ApplicationController
     @accommodation = Accommodation.new
 
     @result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
-
-    logger.info('result =' + @result.inspect)
+    #logger.info('result =' + @result.inspect)
+    @dorms = Dormitory.all
 
     respond_to do |format|
       format.html # new.html.erb
