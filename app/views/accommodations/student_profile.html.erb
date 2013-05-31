@@ -58,10 +58,11 @@
       				<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
 				</div>
   					<div class="span4">
-                    <button class="btn btn-success">Editeaza cerere</button>
+                    <%=link_to "Editeaza cerere", edit_accommodation_path(@accommodation),  :class => "btn btn-success"%>
                     <br/>
                     <br/>
-                    <button class="btn btn-primary">Anuleaza cerere</button>
+		    <%=link_to 'Anuleaza cerere', @accommodation, method: :delete, :class => "btn btn-primary", data: { confirm: 'Sunteti sigur ca vreti sa anulati cererea?'}%>
+                    
   					</div>
 			</div>
 		    </div>

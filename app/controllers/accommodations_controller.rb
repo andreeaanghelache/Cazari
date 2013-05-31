@@ -107,7 +107,10 @@ class AccommodationsController < ApplicationController
 
     @result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
     #logger.info('result =' + @result.inspect)
-  
+    
+    #Get last accommodation sent 
+    @accommodation = Accommodation.where("user_id = ?", @current_user.uid).last()
+    #logger.info("last accommodation= " + @accommodation.inspect)
   end
 
   def verified_results

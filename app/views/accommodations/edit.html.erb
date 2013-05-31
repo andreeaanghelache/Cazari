@@ -404,7 +404,7 @@
   	 <%= f.submit  "Salveaza", :class => 'btn' %>
          <!--a href="/creeaza_cerere" class="btn btn-info">Creeaza cerere</a></li--> 
         <%# link_to 'Destroy', accommodation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <%=link_to 'Anuleaza', @accommodation, method: :delete, :class => "btn"  %>
+        <%=link_to 'Anuleaza', @accommodation, method: :delete, :class => "btn", data: { confirm: 'Sunteti sigur ca vreti sa anulati cererea?'}  %>
 	</div>
         <div style="width:auto height:30px">
         <br/>
