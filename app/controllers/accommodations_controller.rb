@@ -42,11 +42,24 @@ class AccommodationsController < ApplicationController
   # GET /accommodations/1/edit
   def edit
     @accommodation = Accommodation.find(params[:id])
+   
+    @result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
+    #logger.info('result =' + @result.inspect)
+    @dorms = Dormitory.all
+
+     respond_to do |format|
+      format.html # edit.html.erb
+      format.json { render json: @accommodation }
+    end
   end
+
 
   # POST /accommodations
   # POST /accommodations.json
   def create
+    #Add dorms hash to accomodation hash
+    params[:accommodation].merge!(params[:dorms_hash])
+    
     @accommodation = Accommodation.new(params[:accommodation])
 
     respond_to do |format|
@@ -63,6 +76,8 @@ class AccommodationsController < ApplicationController
   # PUT /accommodations/1
   # PUT /accommodations/1.json
   def update
+    params[:accommodation].merge!(params[:dorms_hash])
+
     @accommodation = Accommodation.find(params[:id])
 
     respond_to do |format|
@@ -83,7 +98,7 @@ class AccommodationsController < ApplicationController
     @accommodation.destroy
 
     respond_to do |format|
-      format.html { redirect_to accommodations_url }
+      format.html { redirect_to root_path }
       format.json { head :no_content }
     end
   end

@@ -1,52 +1,56 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>User:</b>
-  <%= @accommodation.user_id %>
-</p>
 
 <p>
-  <b>Last dorm:</b>
+  <b>Camin anul trecut:</b>
   <%= @accommodation.last_dorm %>
 </p>
 
 <p>
-  <b>Last room:</b>
+  <b>Camera anul trecut:</b>
   <%= @accommodation.last_room %>
 </p>
 
 <p>
-  <b>Continuity:</b>
-  <%= @accommodation.continuity %>
+  <b>Continuitate:</b>
+  <%if  @accommodation.continuity %>
+  Da
+  <%else%>
+  Nu
+  <%end%>
 </p>
 
 <p>
-  <b>Social case:</b>
-  <%= @accommodation.social_case %>
+  <b>Caz social:</b>
+  <%if  @accommodation.social_case %>
+  Da
+  <%else%>
+  Nu
+  <%end%>
 </p>
 
 <p>
-  <b>First dorm:</b>
+  <b>Camin 1:</b>
   <%= @accommodation.first_dorm %>
 </p>
 
 <p>
-  <b>Second dorm:</b>
+  <b>Camin 2:</b>
   <%= @accommodation.second_dorm %>
 </p>
 
 <p>
-  <b>Third dorm:</b>
+  <b>Camin 3:</b>
   <%= @accommodation.third_dorm %>
 </p>
 
 <p>
-  <b>Roommate name:</b>
+  <b>Nume coleg:</b>
   <%= @accommodation.roommate_name %>
 </p>
 
 <p>
-  <b>Roommate group:</b>
+  <b>Grupa coleg:</b>
   <%= @accommodation.roommate_group %>
 </p>
 
@@ -55,20 +59,7 @@
   <%= @accommodation.status %>
 </p>
 
-<p>
-  <b>Interdiction dorm:</b>
-  <%= @accommodation.interdiction_dorm %>
-</p>
 
-<p>
-  <b>Interdiction type:</b>
-  <%= @accommodation.interdiction_type %>
-</p>
-
-<p>
-  <b>Interdiction reason:</b>
-  <%= @accommodation.interdiction_reason %>
-</p>
 
 
 <%= link_to 'Edit', edit_accommodation_path(@accommodation) %> |

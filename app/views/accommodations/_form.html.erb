@@ -12,60 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :last_dorm %><br />
+    <%= f.label :camin_anul_trecut %><br />
     <%= f.text_field :last_dorm %>
   </div>
   <div class="field">
-    <%= f.label :last_room %><br />
+    <%= f.label :camera_anul_trecut %><br />
     <%= f.number_field :last_room %>
   </div>
   <div class="field">
-    <%= f.label :continuity %><br />
-    <%= f.check_box :continuity %>
-  </div>
-  <div class="field">
-    <%= f.label :social_case %><br />
-    <%= f.check_box :social_case %>
-  </div>
-  <div class="field">
-    <%= f.label :first_dorm %><br />
+    <%= f.label :preferinta_camin_1 %><br />
     <%= f.text_field :first_dorm %>
   </div>
   <div class="field">
-    <%= f.label :second_dorm %><br />
+    <%= f.label :preferinta_camin_2 %><br />
     <%= f.text_field :second_dorm %>
   </div>
   <div class="field">
-    <%= f.label :third_dorm %><br />
+    <%= f.label :preferinta_camin_3 %><br />
     <%= f.text_field :third_dorm %>
   </div>
   <div class="field">
-    <%= f.label :roommate_name %><br />
+    <%= f.label :nume_coleg %><br />
     <%= f.text_field :roommate_name %>
-  </div>
-  <div class="field">
-    <%= f.label :roommate_group %><br />
-    <%= f.number_field :roommate_group %>
   </div>
   <div class="field">
     <%= f.label :status %><br />
     <%= f.text_field :status %>
-  </div>
-  <div class="field">
-    <%= f.label :interdiction_dorm %><br />
-    <%= f.text_field :interdiction_dorm %>
-  </div>
-  <div class="field">
-    <%= f.label :interdiction_type %><br />
-    <%= f.text_field :interdiction_type %>
-  </div>
-  <div class="field">
-    <%= f.label :interdiction_reason %><br />
-    <%= f.text_area :interdiction_reason %>
   </div>
   <div class="actions">
     <%= f.submit %>

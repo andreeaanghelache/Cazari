@@ -339,9 +339,10 @@
 
   
 
-	    <label>Anul trecut am domiciliat in caminul</label>
-                   <%= select("accomodation","last_dormitory", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
-               
+	    <!--label>Anul trecut am domiciliat in caminul</label-->
+            <%= f.label :last_dorm%>
+                   <%= select("dorms_hash", "last_dorm", @dorms.collect{|r| [r.name, r.id]})%>
+              
 	    <label>camera </label>
 	    <%= f.text_field :last_room, :type => "text", :class => "span5" %>
 
@@ -349,8 +350,6 @@
 	    <label>Rog comisia sa tina cont de: </label>
 
         <label class="radio">
-
-          <!--input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked-->
 
             <%= f.check_box :continuity %>
             continuitate
@@ -360,15 +359,10 @@
 
           <label class="radio">
 
-            <!--input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"-->
-
             <%= f.check_box :social_case %>
             situatie sociala
 
           </label>
-
-	    
-
 	    </div>	    
 
 	    <div class="span7">
@@ -377,15 +371,15 @@
 
 	    <label>Preferinte camin 1:</label>
 
-                   <%= select("accomodation","first_dormitory", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
+                   <%= select("dorms_hash","first_dorm", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
                     
 	    <label>Preferinte camin 2:</label>
 
-                   <%= select("accomodation","second_dormitory", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
+                   <%= select("dorms_hash","second_dorm", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
 	    
 	    <label>Preferinte camin 3:</label>
 
-                   <%= select("accomodation","third_dormitory", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
+                   <%= select("dorms_hash","third_dorm", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
          </div>           
 
         <label>Preferinte coleg (nume):</label>
@@ -401,12 +395,12 @@
          <%= f.hidden_field :user_id, :value => @current_user.uid %>
         
 	<div>
-         <button class="btn">Salveaza</button>
+         <button class="btn">Depune</button>
 
          <!--button class="btn">Depune</button-->
-  	 <%= f.submit  "Depune", :class => 'btn' %>
-
-         <button class="btn">Anuleaza</button>
+  	 <%= f.submit  "Salveaza", :class => 'btn' %>
+         
+         <a href="/"  class="btn" >Anuleaza</a> 
 	</div>
         <div style="width:auto height:30px">
         <br/>

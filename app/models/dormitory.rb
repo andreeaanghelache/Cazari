@@ -4,8 +4,10 @@ class Dormitory < ActiveRecord::Base
   has_one :dormitory_category, :foreign_key => "category_id"
   has_many :allocations, :foreign_key => "dormitory_id"
 
-  has_many :accommodations, :foreign_key => "last_dormitory"
+  has_one :accommodation, :foreign_key => "last_dorm"
+  has_one :accommodation, :foreign_key => "first_dorm"
+  has_one :accommodation, :foreign_key => "second_dorm"
+  has_one :accommodation, :foreign_key => "third_dorm"
 
-  has_many :accommodations, :foreign_key => "first_dormitory"
 
 end
