@@ -51,38 +51,35 @@
 			<br/>
 			<div class="row">
 				<div class="span7">
-      				<h4> Rezultate privind evaluare cerere</h4>
-      				<h5> Pozitia ... pentru anul ... specializare ....</h5>
+      				<h4> Decizia comisiei</h4>
+
                     <table class="table table-striped">
 					<tr>
-						<th>Media:</th>
-						<td>10<td>
+						<th>Camin:</th>
+						<td>Grozavesti A<td>
 					</tr>
 					<tr>
-						<th>Situatie dosar social:</th>
-						<td>Admis</td>
+						<th>Camera:</th>
+						<td>010</td>
 					</tr>
 					
 					<tr>
-						<th>Motiv respingere:</th>
+						<th>Colegi:</th>
 						<td>lorem ipsum</td>
 					</tr>
-					<tr>
-						<th>Interdictie:</th>
-						<td>Caminul Grozavesti A</td>
-					</tr>
-					<tr>
-						<th>Motiv iterdictie:</th>
-						<td>lorem impus</td>
-					</tr>
+
 				</table>
 
 
 				</div>
   					<div class="span4">
-
+  		            <button class="btn btn-success">Accepta&nbsp;</button>
+  		            <br/>
+  		            <br/>
+                    <button class="btn btn-info">Printeaza</button>
                     <br/>
-                    <button class="btn btn-primary modalButton" id="1">Depune contestatie</button>
+                    <br/>
+                    <button class="btn btn-danger modalButton" id="1">Respinge</button>
   					</div>
 			</div>
 		    </div>
@@ -100,32 +97,20 @@
 	
 	  <div class="modal hide fade" id="modal1">
       <div class="modal-header">
+      	<h5>
+      		Redistribuire
+      	</h5>
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h3>Contestatie</h3>
       </div>
         <div class="modal-body">
-                <h4>Contest:</h4>
-        <label class="radio">
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-            Media
-          </label>
-          <label class="radio">
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-             Dosarul
-          </label>
-            <label class="radio">
-            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-             Interdictia
-          </label>
-
-        <h4>Mesaj</h4>
-        <input type="textarea" placeholder="Mesajul contestatiei" rows="5" style="width:440px; min-height: 50px;">
-        <br/>
-        <br/>
-        <button class="btn btn-primary">Acte</button>
+           <p>
+           	Participi la redistribuire ?
+           </p>     
         </div>
       <div class="modal-footer">
-      <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Trimite</button>      </div>
+      <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Da</button>   
+       <button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Nu</button>  
+       </div>
     </div>
   	<script src="/assets/jquery.min.js" type="text/javascript"></script>
 	<script src="/assets/bootstrap.js" type="text/javascript"></script>

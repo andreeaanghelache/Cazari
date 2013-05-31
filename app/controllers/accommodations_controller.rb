@@ -114,6 +114,13 @@ class AccommodationsController < ApplicationController
   end
 
   def verified_results
+    @result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
+    #logger.info('result =' + @result.inspect)
+  end
+
+  def decision 
+    @result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
+    #logger.info('result =' + @result.inspect)
   end
 
 end
