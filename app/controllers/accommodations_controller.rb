@@ -102,4 +102,15 @@ class AccommodationsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def student_profile
+
+    @result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
+    #logger.info('result =' + @result.inspect)
+  
+  end
+
+  def verified_results
+  end
+
 end
