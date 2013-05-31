@@ -339,8 +339,7 @@
 
   
 
-	    <!--label>Anul trecut am domiciliat in caminul</label-->
-            <%= f.label :last_dorm%>
+	    <label>Anul trecut am domiciliat in caminul</label>
                    <%= select("dorms_hash", "last_dorm", @dorms.collect{|r| [r.name, r.id]})%>
               
 	    <label>camera </label>
