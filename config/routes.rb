@@ -17,4 +17,5 @@ Cazari::Application.routes.draw do
   match '/profil_student', :to => 'accommodations#student_profile'
   match '/rezultate_verificare', :to => 'accommodations#verified_results'
   match '/decizia_comisiei', :to => 'accommodations#decision'
+  match '/documente', :to => 'accommodations#documents'
 end

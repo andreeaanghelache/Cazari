@@ -123,4 +123,8 @@ class AccommodationsController < ApplicationController
     #logger.info('result =' + @result.inspect)
   end
 
+  def documents
+  
+  end
+
 end
