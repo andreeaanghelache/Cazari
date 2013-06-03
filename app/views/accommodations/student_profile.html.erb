@@ -58,7 +58,11 @@
       				<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
 				</div>
   					<div class="span4">
-                    <%=link_to "Editeaza cerere", edit_accommodation_path(@accommodation),  :class => "btn btn-success"%>
+		    
+                    <%=link_to "Creeaza cerere", "/creeaza_cerere", :class => "btn btn-info" %>
+		    <br/>
+   		    <br/>
+		    <%=link_to "Editeaza cerere", edit_accommodation_path(@accommodation),  :class => "btn btn-success"%>
                     <br/>
                     <br/>
 		    <%=link_to 'Anuleaza cerere', @accommodation, method: :delete, :class => "btn btn-primary", data: { confirm: 'Sunteti sigur ca vreti sa anulati cererea?'}%>
