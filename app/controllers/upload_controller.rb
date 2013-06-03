@@ -1,9 +1,7 @@
-require 'digest/sha2'
-require 'openssl'
-
 class UploadController < ApplicationController
   
   def handler
+    render :text => '{"success": true}'
   end
 
 end
