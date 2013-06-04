@@ -24,8 +24,8 @@
             <a class="brand" href="">Admin/Manager</a>
               <div class="container" style="width: auto;">
                 <ul class="nav" role="navigation">
-                  <li class= "active"><a href="/lista_cereri">Lista cereri</a></li>
-                  <li><a href="/lista_punctaje">Lista punctaje</a></li>
+                  <li><a href="/lista_cereri">Lista cereri</a></li>
+                  <li class="active"><a href="/lista_punctaje">Lista punctaje</a></li>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@
 	    		</select>
 	    	</div>
 	    	<div class="span3">
-	    		<label>Specializare</label>
+	    		<label>Grupa</label>
 	    		<select class="span3" id="domeniuStudiu">
 	    			<option value="0">Toate domeniile</option>
 	    			<option value="1">Matematica</option>
@@ -82,9 +82,9 @@
 	    	<div class="span4">
 	    		<label >Status</label>
 			<select class="span3" id="domeniuStudiu">
-                                <option value="0">In asteptare</option>
-                                <option value="1">Verificata</option>
-                                <option value="2">Respinsa</option>
+                                <option value="0">Verificat</option>
+                                <option value="1">Neverificat</option>
+                                <option value="2">Contestat</option>
                                
                         </select>
 
@@ -139,17 +139,14 @@
 				<th>#</th>
 				<th>Prenume</th>
 				<th>Nume</th>
-                                <th>Detalii</th>
-				<th>Status</th>
+                                <th>Punctaj</th>
 			</tr>
 			<% @accommodations.each do |accommodation| %>
 			<tr>
 			  <td> <%= @contor = 1 + @contor %></td>
 			  <td> <%# @user.show_by_id({:id => application["user_id"]})[0]["first_name"] %>Gigi</td>
 			  <td> <%# @user.show_by_id({:id => application["user_id"]})[0]["last_name"] %>Vasile</td>
-			  <td> <%= content_tag(:button, "Vezi Cerere", :class => "btn btn-info modalButton", :id => 1)  %> </td>
-			   <!--td><button class='btn btn-info modalButton' param-del="#{application.id}"> Vezi bursa </button></td>-->
-			  <td> <%= accommodation["status"] %> </td>
+			  <td> <input type="text" placeholder=""> </td>
 			</tr>
             <% end %>
 		</table>

@@ -6,6 +6,8 @@ class AccommodationsController < ApplicationController
  
  def index
     @accommodations = Accommodation.all
+    
+    @contor = 0
 
     respond_to do |format|
       format.html # index.html.erb
@@ -127,4 +129,9 @@ class AccommodationsController < ApplicationController
   
   end
 
+  def score_list
+    @contor = 0
+    
+    @accommodations = Accommodation.all
+  end
 end

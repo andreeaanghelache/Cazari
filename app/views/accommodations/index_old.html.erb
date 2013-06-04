@@ -1,0 +1,49 @@
+<h1>Listing accommodations</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Last dorm</th>
+    <th>Last room</th>
+    <th>Continuity</th>
+    <th>Social case</th>
+    <th>First dorm</th>
+    <th>Second dorm</th>
+    <th>Third dorm</th>
+    <th>Roommate name</th>
+    <th>Roommate group</th>
+    <th>Status</th>
+    <th>Interdiction dorm</th>
+    <th>Interdiction type</th>
+    <th>Interdiction reason</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @accommodations.each do |accommodation| %>
+  <tr>
+    <td><%= accommodation.user_id %></td>
+    <td><%= accommodation.last_dorm %></td>
+    <td><%= accommodation.last_room %></td>
+    <td><%= accommodation.continuity %></td>
+    <td><%= accommodation.social_case %></td>
+    <td><%= accommodation.first_dorm %></td>
+    <td><%= accommodation.second_dorm %></td>
+    <td><%= accommodation.third_dorm %></td>
+    <td><%= accommodation.roommate_name %></td>
+    <td><%= accommodation.roommate_group %></td>
+    <td><%= accommodation.status %></td>
+    <td><%= accommodation.interdiction_dorm %></td>
+    <td><%= accommodation.interdiction_type %></td>
+    <td><%= accommodation.interdiction_reason %></td>
+    <td><%= link_to 'Show', accommodation %></td>
+    <td><%= link_to 'Edit', edit_accommodation_path(accommodation) %></td>
+    <td><%= link_to 'Destroy', accommodation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Accommodation', new_accommodation_path %>

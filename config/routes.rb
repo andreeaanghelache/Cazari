@@ -20,4 +20,7 @@ Cazari::Application.routes.draw do
   match '/documente', :to => 'accommodations#documents'
 
   match '/upload/handler', :to => 'upload#handler'
+
+  match 'lista_cereri', :to => 'accommodations#index'
+  match 'lista_punctaje', :to => 'accommodations#score_list'
 end
