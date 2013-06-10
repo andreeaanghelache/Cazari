@@ -23,4 +23,11 @@ Cazari::Application.routes.draw do
 
   match 'lista_cereri', :to => 'accommodations#index'
   match 'lista_punctaje', :to => 'accommodations#score_list'
+
+  match 'lista_cereri_admin', :to => 'accommodations#admin_index'
+  match 'stabileste_date', :to => 'accommodations#set_dates'
+  match 'stabileste_camere', :to => 'accommodations#set_rooms'
+  match 'stabileste_locuri', :to => 'accommodations#set_numbers'
+  match 'istoric', :to => 'accommodations#session_list'
+  match 'detalii_sesiune', :to => 'accommodations#session_show'
 end

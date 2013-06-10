@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @dormitory.category_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @dormitory.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @dormitory.address %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @dormitory.description %>
+</p>
+
+<p>
+  <b>Administrator:</b>
+  <%= @dormitory.administrator %>
+</p>
+
+<p>
+  <b>Telephone:</b>
+  <%= @dormitory.telephone %>
+</p>
+
+
+<%= link_to 'Edit', edit_dormitory_path(@dormitory) %> |
+<%= link_to 'Back', dormitories_path %>

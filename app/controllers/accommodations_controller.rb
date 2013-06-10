@@ -134,4 +134,22 @@ class AccommodationsController < ApplicationController
     
     @accommodations = Accommodation.all
   end
+
+  def admin_index
+  end
+
+  def set_dates
+  end 
+  
+  def set_rooms
+  end 
+  
+  def set_numbers
+  end 
+
+  def session_list
+  end
+
+  def session_show
+  end
 end
