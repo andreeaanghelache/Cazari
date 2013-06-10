@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    logger.info('SESSION=' + session[:user_id].to_s)
+    #logger.info('SESSION=' + session[:user_id].to_s)
     return nil unless session[:user_id]
     @current_user ||= User.find_by_uid(session[:user_id]['uid'])
   end

@@ -1,7 +1,7 @@
 class GuestController < ApplicationController
 
  def index
- logger.info("current user=" + current_user.inspect)
+ #logger.info("current user=" + current_user.inspect)
    if current_user
      if current_user.is_student == "true"
        respond_to do |format|
