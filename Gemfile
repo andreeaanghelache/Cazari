@@ -20,4 +20,5 @@ end
 gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-oauth2'
+gem 'test-unit-rails'
 
