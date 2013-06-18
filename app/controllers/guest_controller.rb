@@ -20,4 +20,9 @@ class GuestController < ApplicationController
    end
  end
 
+ def metodologie
+   respond_to do |format|
+    format.pdf  
+   end
+ end
 end
