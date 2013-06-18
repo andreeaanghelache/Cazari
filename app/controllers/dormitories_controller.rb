@@ -80,4 +80,13 @@ class DormitoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def index_old
+    @dormitories = Dormitory.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @dormitories }
+    end
+  end
 end

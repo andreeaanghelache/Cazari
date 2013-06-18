@@ -15,6 +15,7 @@ Cazari::Application.routes.draw do
 
   #pagini guest
   match '/metodologie', :to => 'guest#metodologie.pdf'
+  match '/prezentare_camine', :to => 'dormitories#index_old'
 
   #pagini student
   match '/creeaza_cerere', :to => 'accommodations#new'

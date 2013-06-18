@@ -26,10 +26,12 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">      
-        	<a class="brand" href="index.html">Profil camin</a>
+        	<a class="brand" href="index.html">Detalii cămin</a>
         	<div class="nav-collapse collapse nav-bar-inverse-collapse">
         		<ul class="nav pull-right">
-        		<li><a href="#">Iesire</a></li>
+				<li><a href="/metodologie">Metodologie</a></li>
+                    		<li><a href="/auth/autentificare">Autentificare </a></li>
+                    		<li><a href="/prezentare_camine">Prezentare cămine </a></li>
         		</ul>
         	</div>
         </div>
@@ -43,24 +45,28 @@
 			<div class="span3">
 				<img src="http://www.unibuc.ro/n/student/img/grozavesti.A1.JPG" class="img-polaroid" width="150" height="150" >
 			</div>
-			<div class="span5">
+			<div class="span5" style="width: 500px">
 				<table class="table table-striped">
 					<tr>
 						<th>Nume:</th>
-						<td>Grozavesti</td>
+						<td><%=@dormitory.name%></td>
 					</tr>
 					<tr>
 						<th>Adresa:</th>
-						<td>..</td>
+						<td><%=@dormitory.address%></td>
 					</tr>
 					<tr>
 						<th>Detalii:</th>
-						<td>....</td>
+						<td><%=@dormitory.description%></td>
 					</tr>
 					
 					<tr>
-						<th>Alte informatii:</th>
-						<td>....</td>
+						<th>Administrator:</th>
+						<td><%=@dormitory.administrator%></td>
+					</tr>
+					<tr>
+						<th>Număr de telefon:</th>
+						<td><%=@dormitory.telephone%></td>
 					</tr>
 				</table>
 			</div>
