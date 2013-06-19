@@ -12,6 +12,14 @@
       <div class="navbar-inner">
         <div class="container">      
         	<a class="brand" href="/">Cazare</a>
+		<div class="nav-collapse collapse nav-bar-inverse-collapse">
+                        <ul class="nav pull-right">
+                        <li><a href="/logout">Ieșire</a></li>
+                    <!--li><a href="#">Metodologie</a></li>
+                    <li><a href="#">Log out </a></li-->
+                        </ul>
+                </div>
+
         </div>
       </div>
     </div>
@@ -144,14 +152,15 @@
 			<% @accommodations.each do |accommodation| %>
 			<tr>
 			  <td> <%= @contor = 1 + @contor %></td>
-			  <td> <%# @user.show_by_id({:id => application["user_id"]})[0]["first_name"] %>Gigi</td>
-			  <td> <%# @user.show_by_id({:id => application["user_id"]})[0]["last_name"] %>Vasile</td>
+			  <td> <%= @user.show_by_id({:id => accommodation["user_id"]})[0]["first_name"] %>
+			   </td>
+			  <td> <%= @user.show_by_id({:id => accommodation["user_id"]})[0]["last_name"] %></td>
 			  <td> <input type="text" placeholder=""> </td>
 			</tr>
             <% end %>
 		</table>
 			
-	
+	    <input type="button" id="salveaza" value="Salveaza punctaje" class="btn btn-primary" style="margin-left: 600px">
     <!-- MODAL PENTRU VIZUALIZARE CERERE -->
     <div class="modal hide fade" id="modalCerere">
 	    <div class="modal-header">
