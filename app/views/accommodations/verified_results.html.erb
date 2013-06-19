@@ -16,11 +16,11 @@
       <div class="navbar-inner">
         <div class="container">      
         	<a class="brand" href="/">Cazare</a>
-        	<!--div class="nav-collapse collapse nav-bar-inverse-collapse">
+        	<div class="nav-collapse collapse nav-bar-inverse-collapse">
         		<ul class="nav pull-right">
-        		<li><a href="#">Camine</a></li>
-        	    <li><a href="#">Metodologie</a></li>
-        	    <li><a href="#">Log out </a></li>
+        		<li><a href="/profil_student">Profil student</a></li>
+        	    <li><a href="/logout">Ieșire</a></li>
+        	    <!--li><a href="#">Log out </a></li-->
         		</ul>
         	</div-->
         </div>
@@ -37,8 +37,8 @@
 		    <h4> Buna, <%=@result["user"]["first_name"]%> <%=@result["user"]["last_name"]%>! 	</h4>
 			<div class="row">
 				<div class="span7">
-      				<h4>Proces cazare</h4>
-      				<p>Informatii privind stadiul la care te afli in procesuld e cazare, comentarii,etc.</p>
+      				<h4>Informații</h4>
+      				<p>Acestea sunt rezultatele verificării cererii de cazare de către comisie. Rezultatele pot fi contestate.</p>
 				</div>
   					<div class="span4">
       				Progress: <span class="pull-right strong">36%</span>
@@ -106,15 +106,15 @@
         <div class="modal-body">
                 <h4>Contest:</h4>
         <label class="radio">
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" >
             Media
           </label>
           <label class="radio">
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            <input type="checkbox" name="optionsRadios" id="optionsRadios2" value="option2">
              Dosarul
           </label>
             <label class="radio">
-            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+            <input type="checkbox" name="optionsRadios" id="optionsRadios3" value="option3">
              Interdictia
           </label>
 
@@ -122,7 +122,7 @@
         <input type="textarea" placeholder="Mesajul contestatiei" rows="5" style="width:440px; min-height: 50px;">
         <br/>
         <br/>
-        <button class="btn btn-primary">Acte</button>
+        <!--button class="btn btn-primary">Acte</button-->
         </div>
       <div class="modal-footer">
       <button type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Trimite</button>      </div>
