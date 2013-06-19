@@ -49,6 +49,11 @@ class AccommodationsController < ApplicationController
     #logger.info('result =' + @result.inspect)
     @dorms = Dormitory.all
 
+    @last_dorm = Dormitory.find(@accommodation.last_dorm)
+    @first_dorm = Dormitory.find(@accommodation.first_dorm)
+    @second_dorm = Dormitory.find(@accommodation.second_dorm)
+    @third_dorm = Dormitory.find(@accommodation.third_dorm)
+
      respond_to do |format|
       format.html # edit.html.erb
       format.json { render json: @accommodation }

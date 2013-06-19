@@ -347,8 +347,8 @@
   
 
 	    <!--label>Anul trecut am domiciliat in caminul</label-->
-            <%= f.label :last_dorm%>
-                   <%= select("dorms_hash", "last_dorm", @dorms.collect{|r| [r.name, r.id]})%>
+            <label>Anul trecut am domicilat in caminul </label>
+                   <%= select("dorms_hash", "last_dorm", @dorms.collect{|r| [r.name, r.id]}, { :prompt => @last_dorm.name })%>
               
 	    <label>camera </label>
 	    <%= f.text_field :last_room, :type => "text", :class => "span5" %>
@@ -381,15 +381,15 @@
 
 	    <label>Preferinte camin 1:</label>
 
-                   <%= select("dorms_hash","first_dorm", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
+                   <%= select("dorms_hash","first_dorm", @dorms.collect{|r| [r.name, r.id]}, {:prompt => @first_dorm.name} )%>
                     
 	    <label>Preferinte camin 2:</label>
 
-                   <%= select("dorms_hash","second_dorm", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
+                   <%= select("dorms_hash","second_dorm", @dorms.collect{|r| [r.name, r.id]}, {:prompt => @second_dorm.name} )%>
 	    
 	    <label>Preferinte camin 3:</label>
 
-                   <%= select("dorms_hash","third_dorm", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true })%>
+                   <%= select("dorms_hash","third_dorm", @dorms.collect{|r| [r.name, r.id]}, {:prompt => @third_dorm.name} )%>
          </div>           
 
         <label>Preferinte coleg (nume):</label>
@@ -466,7 +466,7 @@
                 },
                 template: '<div class="qq-uploader">' +
 '<pre class="qq-upload-drop-area"><span>{dragZoneText}</span></pre>' +
-'<div class="qq-upload-button btn btn-info" style="width: 200px; margin-left: 280px;">{uploadButtonText}</div>' +
+'<div class="qq-upload-button btn btn-info" style="width: 200px; margin-left: 420px;">{uploadButtonText}</div>' +
 '<span class="qq-drop-processing"><span>{dropProcessingText}</span><span class="qq-drop-processing-spinner"></span></span>' +
 '<ul class="qq-upload-list" style="margin-top: 10px; margin-left: 420px; text-align: center;"></ul>' +
 '</div>'
