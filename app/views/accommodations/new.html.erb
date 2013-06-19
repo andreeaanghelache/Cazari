@@ -346,7 +346,7 @@
   
 
 	    <label>Anul trecut am domiciliat in caminul</label>
-                   <%= select("dorms_hash", "last_dorm", @dorms.collect{|r| [r.name, r.id]})%>
+                   <%= select("dorms_hash", "last_dorm", @dorms.collect{|r| [r.name, r.id]}, { :include_blank => true})%>
               
 	    <label>camera </label>
 	    <%= f.text_field :last_room, :type => "text", :class => "span5" %>
@@ -461,7 +461,7 @@
                 },
                 template: '<div class="qq-uploader">' +
 '<pre class="qq-upload-drop-area"><span>{dragZoneText}</span></pre>' +
-'<div class="qq-upload-button btn btn-info" style="width: 200px; margin-left: 280px;">{uploadButtonText}</div>' +
+'<div class="qq-upload-button btn btn-info" style="width: 200px; margin-left: 420px;">{uploadButtonText}</div>' +
 '<span class="qq-drop-processing"><span>{dropProcessingText}</span><span class="qq-drop-processing-spinner"></span></span>' +
 '<ul class="qq-upload-list" style="margin-top: 10px; margin-left: 420px; text-align: center;"></ul>' +
 '</div>'
