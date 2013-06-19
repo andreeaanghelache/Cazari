@@ -1,66 +1,138 @@
-<p id="notice"><%= notice %></p>
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Cazare</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<link href="/assets/bootstrap.css" rel="stylesheet" />
+	<style>body{padding-top: 60px;}</style>
+	<link href="/assets/bootstrap-responsive.css" rel="stylesheet" />
+	<link href="/assets/bwizard.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">      
+        	<a class="brand" href="/">Cazare</a>
+        	<div class="nav-collapse collapse nav-bar-inverse-collapse">
+        		<ul class="nav pull-right">
+        		<li><a href="/profil_student">Profil student</a></li>
+        	    <!--li><a href="#">Metodologie</a></li>
+        	    <li><a href="#">Log out </a></li-->
+        		</ul>
+        	</div>
+        </div>
+      </div>
+    </div>
+
+	 <div class="container-narrow">
+		<div class="masthead">
+		</div>
+	 
+	  <div class="well">
+
+			<div class="span12">
+		    <h4> Buna, <%=@result["user"]["first_name"]%> <%=@result["user"]["last_name"]%>! 	</h4>
+			<!--div class="row">
+				<div class="span7"></div>
+  				<div class="span4"> </div>
+  				</div>
+			</div-->
+			<br/>
+			<br/>
+			<div class="row">
+				<div class="span7">
+      				<h4> Detalii cerere de cazare</h4>
+
+                    <table class="table table-striped">
+					<tr>
+						<th>Camin anul trecut:</th>
+						<td><%if @last_dorm%>
+						    <%= @last_dorm.name%>
+						    <%end%>	
+						<td>
+					</tr>
+					<tr>
+						<th>Camera:</th>
+						<td><%=@accommodation.last_room%></td>
+					</tr>
+					
+					<tr>
+						<th>Continuitate:</th>
+						<td><%if @accommodation.continuity%>
+						    Da
+						    <%else%>
+						    Nu
+						    <%end%>
+						</td>
+					</tr>
+					<tr>
+						<th>Dosar social:</th>
+						<td><%if @accommodation.social_case%>
+						    Da
+						    <%else%>
+						    Nu
+						    <%end%>
+						</td>
+					</tr>
+					<tr>
+						<th>Preferințe cămin 1:</th>
+						<td><%if @first_dorm%>
+						    <%= @first_dorm.name%>
+						    <%end%>	
+						<td>
+					</tr>
+					<tr>
+						<th>Preferințe cămin 2:</th>
+						<td><%if @second_dorm%>
+						    <%= @second_dorm.name%>
+						    <%end%>	
+						<td>
+					</tr>
+					<tr>
+						<th>Preferințe cămin 3:</th>
+						<td><%if @third_dorm%>
+						    <%= @third_dorm.name%>
+						    <%end%>	
+						<td>
+					</tr>
+					<tr>
+						<th>Preferințe coleg - nume:</th>
+						<td><%=@accommodation.roommate_name%></td>
+					</tr>
+					<tr>
+						<th>Preferințe coleg - grupa:</th>
+						<td><%=@accommodation.roommate_group%></td>
+					</tr>
+					<tr>
+						<th>Status cerere:</th>
+						<td><%=@accommodation.status%></td>
+					</tr>
+
+				</table>
 
 
-<p>
-  <b>Camin anul trecut:</b>
-  <%= @accommodation.last_dorm %>
-</p>
+				</div>
+  					<div class="span4"></div>
+			</div>
+		    </div>
+		<div class="clearfix"></div>			
+		</div>
+		
+		</div>
+	</div>
+		
+	</div>
+	<div class="bottom-logo">
+		<img src="/assets/logo.png" width="150px" height="150px"/>
+		</div>
 
-<p>
-  <b>Camera anul trecut:</b>
-  <%= @accommodation.last_room %>
-</p>
-
-<p>
-  <b>Continuitate:</b>
-  <%if  @accommodation.continuity %>
-  Da
-  <%else%>
-  Nu
-  <%end%>
-</p>
-
-<p>
-  <b>Caz social:</b>
-  <%if  @accommodation.social_case %>
-  Da
-  <%else%>
-  Nu
-  <%end%>
-</p>
-
-<p>
-  <b>Camin 1:</b>
-  <%= @accommodation.first_dorm %>
-</p>
-
-<p>
-  <b>Camin 2:</b>
-  <%= @accommodation.second_dorm %>
-</p>
-
-<p>
-  <b>Camin 3:</b>
-  <%= @accommodation.third_dorm %>
-</p>
-
-<p>
-  <b>Nume coleg:</b>
-  <%= @accommodation.roommate_name %>
-</p>
-
-<p>
-  <b>Grupa coleg:</b>
-  <%= @accommodation.roommate_group %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= @accommodation.status %>
-</p>
-
-
-
-
-<%= link_to 'Edit', edit_accommodation_path(@accommodation) %> |
-<%= link_to 'Back', accommodations_path %>
+	
+  	<script src="/assets/jquery.min.js" type="text/javascript"></script>
+	<script src="/assets/bootstrap.js" type="text/javascript"></script>
+	<script src="/assets/jasny-bootstrap.js" type="text/javascript"></script>
+	<script src="/assets/bwizard.js" type="text/javascript"></script>
+</body>
+</html>

@@ -348,7 +348,11 @@
 
 	    <!--label>Anul trecut am domiciliat in caminul</label-->
             <label>Anul trecut am domicilat in caminul </label>
+	    <%if @last_dorm%>
                    <%= select("dorms_hash", "last_dorm", @dorms.collect{|r| [r.name, r.id]}, { :prompt => @last_dorm.name })%>
+	    <%else%>
+                   <%= select("dorms_hash", "last_dorm", @dorms.collect{|r| [r.name, r.id]}, { :prompt => "" })%>
+	    <%end%>
               
 	    <label>camera </label>
 	    <%= f.text_field :last_room, :type => "text", :class => "span5" %>
@@ -380,18 +384,24 @@
 	    <div>
 
 	    <label>Preferinte camin 1:</label>
-
-                   <%= select("dorms_hash","first_dorm", @dorms.collect{|r| [r.name, r.id]}, {:prompt => @first_dorm.name} )%>
-                    
+	    <%if @first_dorm%>
+                   <%= select("dorms_hash", "first_dorm", @dorms.collect{|r| [r.name, r.id]}, { :prompt => @first_dorm.name })%>
+	    <%else%>
+                   <%= select("dorms_hash", "first_dorm", @dorms.collect{|r| [r.name, r.id]}, { :prompt => "" })%>
+	    <%end%>
 	    <label>Preferinte camin 2:</label>
-
-                   <%= select("dorms_hash","second_dorm", @dorms.collect{|r| [r.name, r.id]}, {:prompt => @second_dorm.name} )%>
-	    
+	    <%if @second_dorm%>
+                   <%= select("dorms_hash", "second_dorm", @dorms.collect{|r| [r.name, r.id]}, { :prompt => @second_dorm.name })%>
+	    <%else%>
+                   <%= select("dorms_hash", "second_dorm", @dorms.collect{|r| [r.name, r.id]}, { :prompt => "" })%>
+	    <%end%>
 	    <label>Preferinte camin 3:</label>
-
-                   <%= select("dorms_hash","third_dorm", @dorms.collect{|r| [r.name, r.id]}, {:prompt => @third_dorm.name} )%>
-         </div>           
-
+	    <%if @third_dorm%>
+                   <%= select("dorms_hash", "third_dorm", @dorms.collect{|r| [r.name, r.id]}, { :prompt => @third_dorm.name })%>
+	    <%else%>
+                   <%= select("dorms_hash", "third_dorm", @dorms.collect{|r| [r.name, r.id]}, { :prompt => "" })%>
+	    <%end%>
+	<div>
         <label>Preferinte coleg (nume):</label>
 
 	 <%= f.text_field :roommate_name, :type => "text", :class => "span5" %>

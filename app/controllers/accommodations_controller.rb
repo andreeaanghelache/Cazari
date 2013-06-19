@@ -20,6 +20,19 @@ class AccommodationsController < ApplicationController
   def show
     @accommodation = Accommodation.find(params[:id])
 
+    @result = JSON.parse(open("http://fmi-autentificare.herokuapp.com/users/#{@current_user.uid}.json?oauth_token=#{@current_user.token}").read)
+    if @accommodation.last_dorm != ""
+      @last_dorm = Dormitory.find(@accommodation.last_dorm)
+    end 
+    if @accommodation.first_dorm != ""
+    @first_dorm = Dormitory.find(@accommodation.first_dorm)
+    end
+    if @accommodation.second_dorm != ""
+    @second_dorm = Dormitory.find(@accommodation.second_dorm)
+    end
+    if @accommodation.third_dorm != ""
+    @third_dorm = Dormitory.find(@accommodation.third_dorm)
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @accommodation }
@@ -49,11 +62,18 @@ class AccommodationsController < ApplicationController
     #logger.info('result =' + @result.inspect)
     @dorms = Dormitory.all
 
-    @last_dorm = Dormitory.find(@accommodation.last_dorm)
+    if @accommodation.last_dorm != ""
+      @last_dorm = Dormitory.find(@accommodation.last_dorm)
+    end 
+    if @accommodation.first_dorm != ""
     @first_dorm = Dormitory.find(@accommodation.first_dorm)
+    end
+    if @accommodation.second_dorm != ""
     @second_dorm = Dormitory.find(@accommodation.second_dorm)
+    end
+    if @accommodation.third_dorm != ""
     @third_dorm = Dormitory.find(@accommodation.third_dorm)
-
+    end
      respond_to do |format|
       format.html # edit.html.erb
       format.json { render json: @accommodation }

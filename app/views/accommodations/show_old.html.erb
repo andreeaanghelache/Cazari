@@ -1,0 +1,68 @@
+
+
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <b>Camin anul trecut:</b>
+  <%= @accommodation.last_dorm %>
+</p>
+
+<p>
+  <b>Camera anul trecut:</b>
+  <%= @accommodation.last_room %>
+</p>
+
+<p>
+  <b>Continuitate:</b>
+  <%if  @accommodation.continuity %>
+  Da
+  <%else%>
+  Nu
+  <%end%>
+</p>
+
+<p>
+  <b>Caz social:</b>
+  <%if  @accommodation.social_case %>
+  Da
+  <%else%>
+  Nu
+  <%end%>
+</p>
+
+<p>
+  <b>Camin 1:</b>
+  <%= @accommodation.first_dorm %>
+</p>
+
+<p>
+  <b>Camin 2:</b>
+  <%= @accommodation.second_dorm %>
+</p>
+
+<p>
+  <b>Camin 3:</b>
+  <%= @accommodation.third_dorm %>
+</p>
+
+<p>
+  <b>Nume coleg:</b>
+  <%= @accommodation.roommate_name %>
+</p>
+
+<p>
+  <b>Grupa coleg:</b>
+  <%= @accommodation.roommate_group %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @accommodation.status %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_accommodation_path(@accommodation) %> |
+<%= link_to 'Back', accommodations_path %>
