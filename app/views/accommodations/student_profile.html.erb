@@ -19,13 +19,13 @@
       <div class="navbar-inner">
         <div class="container">      
         	<a class="brand" href="pagCandidat.html">Cazare</a>
-        	<!--div class="nav-collapse collapse nav-bar-inverse-collapse">
+        	<div class="nav-collapse collapse nav-bar-inverse-collapse">
         		<ul class="nav pull-right">
-        		<li><a href="#">Camine</a></li>
-        	    <li><a href="#">Metodologie</a></li>
-        	    <li><a href="#">Log out </a></li>
+        		<li><a href="/logout">Ieșire</a></li>
+        	    <!--li><a href="#">Metodologie</a></li>
+        	    <li><a href="#">Log out </a></li-->
         		</ul>
-        	</div-->
+        	</div>
         </div>
       </div>
     </div>
@@ -41,7 +41,13 @@
 			<div class="row">
 				<div class="span7">
       				<h4>Proces cazare</h4>
-      				<p>Informatii privind stadiul la care te afli in procesuld e cazare, comentarii,etc.</p>
+      				<p>Pentru a crea o cerere de cazare apasă pe butonul "Creează cerere". Vei fi direcționat către o pagină unde
+vei putea completa informațiile legate de cazare. La sfârșit poți depune cererea sau o poți salva pentru a te întoarce mai tarziu la ea.</p>
+				<p>Cererea poate fi editată apasând butonul "Editează cerere". O cerere poate fi editată de mai multe ori.</p>
+				<p>Nu se poate crea și depune decât o cerere. După depunere, cererea nu mai poate fi editată, însă poate fi 
+anulată. </p>
+				<p>După verificarea cererilor, vei putea vedea rezultatul verificării apăsând butonul "Vezi rezultatele verificarii cererii". </p>
+				<p>După distribuirea locurilor de cazare vei putea vedea decizia comisiei prin apăsare butonului "Vezi decizie comisie". </p>
 				</div>
   					<div class="span4">
       				Progress: <span class="pull-right strong">36%</span>
@@ -54,27 +60,19 @@
 			<br/>
 			<div class="row">
 				<div class="span7">
-      				<h4> Alte informatii</h4>
-      				<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
-				</div>
-  					<div class="span4">
-		    
-                    <%=link_to "Creeaza cerere", "/creeaza_cerere", :class => "btn btn-info" %>
-		    <br/>
-   		    <br/>
-		    <%=link_to "Editeaza cerere", edit_accommodation_path(@accommodation),  :class => "btn btn-success"%>
-                    <br/>
-                    <br/>
-		    <%=link_to 'Anuleaza cerere', @accommodation, method: :delete, :class => "btn btn-primary", data: { confirm: 'Sunteti sigur ca vreti sa anulati cererea?'}%>
+      				<!--h4> Alte informatii</h4>
+      				<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p-->
+                    <%=link_to "Creeaza cerere", "/creeaza_cerere", :class => "btn btn-info"%>
+		    <%=link_to "Editeaza cerere", edit_accommodation_path(@accommodation),  :class => "btn btn-info"%>
+		    <%=link_to 'Anuleaza cerere', @accommodation, method: :delete, :class => "btn btn-info", data: { confirm: 'Sunteti sigur ca vreti sa anulati cererea?'}%>
                     <br/>
 		    <br/>
                     <%=link_to "Vezi rezultatele verificarii cererii", "/rezultate_verificare", :class => "btn btn-info" %>
-                    <br/>
-		    <br/>
 		    <%=link_to "Vezi decizia comisiei", "/decizia_comisiei", :class => "btn btn-info" %>
-  					</div>
-			</div>
-		    </div>
+				</div>
+  					<div class="span4"></div>
+                    </div>
+		 </div>   
 		<div class="clearfix"></div>			
 		</div>
 		

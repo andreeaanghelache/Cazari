@@ -13,6 +13,11 @@ class GuestController < ApplicationController
        		format.html { redirect_to '/lista_cereri'}
        end
      end
+     if current_user.is_admin == "true"
+       respond_to do |format|
+       		format.html { redirect_to '/lista_cereri_admin'}
+       end
+     end
    else
      respond_to do |format|
           format.html # index.html.erb
